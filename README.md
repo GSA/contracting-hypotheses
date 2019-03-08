@@ -34,6 +34,15 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
+### Launch Jupyter
+Once you've got jupyter and the Python dependencies, you can launch Jupyter and then open these notebooks:
+
+```bash
+cd path/to/this/locally/cloned/repo
+jupyter notebook
+```
+
+The above will open Jupyter in your browser, using this repo as the root directory. From there, you can navigate to the notebooks and open them.
 
 ## Contributing
 Please read [CONTRIBUTING.md](https://github.com/GSA/contracting-hypotheses/blob/master/CONTRIBUTING.MD) for details on our code of conduct, and the process for submitting pull requests to us.
