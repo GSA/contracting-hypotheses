@@ -14,38 +14,45 @@ This repository provides a jupyter notebook for each of the statistical analyses
 ## Getting Started
 
 ### Prerequisites
-First, you'll need Jupyter Notebook. You can find directions on how to get that [here](https://jupyter.org/install).
 
-Then you'll want to install the packages we use.
+First, you'll need Python 3.7. We recommend using `pyenv` to get this (as well as other versions of Python).
 
-You can either install them globally
+Then you'll need Jupyter Notebook. You can find directions on how to get that [here](https://jupyter.org/install). They recommend downloading Anaconda to get it, but we suggest using `pip` if you're already using `pyenv` to manage your python versions.
 
-```bash
-cd path/to/this/locally/cloned/repo
-pip install -r requirements.txt
-```
-
-or create a virtual environment using [venv](https://docs.python.org/3/library/venv.html):
+Then you'll want to clone this repo and `cd` in to it:
 
 ```bash
-cd path/to/this/locally/cloned/repo
-python3 -m venv env
-source env/bin/activate
-pip install -r requirements.txt
+git clone git@github.com:GSA/contracting-hypotheses.git
+cd contracting-hypotheses
 ```
 
-### Launch Jupyter
-Once you've got jupyter and the Python dependencies, you can launch Jupyter and then open these notebooks:
+We use `pipenv` for a virtual environment. You can find instructions on installing that [here](https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv).
+
+Once you've got `pipenv` installed, you can start up the virtual environment using:
 
 ```bash
-cd path/to/this/locally/cloned/repo
-jupyter notebook
+pipenv install
 ```
 
-The above will open Jupyter in your browser, using this repo as the root directory. From there, you can navigate to the notebooks and open them.
+Next, activate the Pipenv shell:
+
+```bash
+pipenv shell
+```
+
+This will spawn a new shell subprocess, which can be deactivated by using `exit`.
+
+One of the required packages you just installed is `ipykernel`. We use this to create a kernel that uses our virtual enivronment for the Jupyter Notebook:
+
+```bash
+ipython kernel install --user --name=contracting-hypotheses
+```
+
+At this point, you can start jupyter with `jupyter notebook`. When you open a notebook, be sure you're using the kernel you created(contracting-hypotheses).
 
 ## Contributing
-Please read [CONTRIBUTING.md](https://github.com/GSA/contracting-hypotheses/blob/master/CONTRIBUTING.MD) for details on our code of conduct, and the process for submitting pull requests to us.
+
+Please read [CONTRIBUTING.md](https://github.com/GSA/contracting-hypotheses/blob/master/CONTRIBUTING.MD) for details on our code of conduct and the process for submitting pull requests to us.
 
 
 ## License
